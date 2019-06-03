@@ -24,7 +24,6 @@ public class PostDao {
 		return 1 == sqlSession.insert("post.insert", postVo);
 	}
 	
-	//블로�?�??�면 �?카테고리 리스??
 	public List<PostVo> getFirstCategoryList(String blogId) {
 		return sqlSession.selectList("post.getFirstCategoryList", blogId);
 	}
