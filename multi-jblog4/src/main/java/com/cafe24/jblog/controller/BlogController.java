@@ -133,12 +133,12 @@ public class BlogController {
 	public String adminBasic
 	(
 			@PathVariable("id") String blogId,
-			@RequestParam("title") String blogTitle,
+			@RequestParam(value="title", required=false) String blogTitle,
 			@RequestParam("logo-file") MultipartFile multipartFile,
 			
 			Model model
 	) {
-		
+		System.out.println(blogTitle);
 		
 		blogService.restoreBlogInfo(multipartFile, blogId, blogTitle);
 		model.addAttribute("blog", blogService.get(blogId));
