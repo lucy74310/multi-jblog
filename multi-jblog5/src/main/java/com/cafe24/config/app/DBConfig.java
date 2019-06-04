@@ -12,11 +12,13 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@Configuration
-@EnableTransactionManagement
-@PropertySource("classpath:properties/jdbc.properties")
+//@Configuration
+//@EnableTransactionManagement
+//@PropertySource("classpath:properties/jdbc.properties")
 public class DBConfig {
-
+	public DBConfig() {
+		System.out.println("DBConfig");
+	}
 	@Autowired
 	private Environment env;
 

@@ -10,15 +10,13 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@Configuration
-@EnableWebMvc
-@PropertySource("classpath:properties/multipart.properties")
+//@PropertySource("classpath:properties/multipart.properties")
 public class FileuploadConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	private Environment env;
 	//
-	// Multipart Resolver
+	// Multipart Resolverz
 	//
 	@Bean
 	public CommonsMultipartResolver commonsMultipartResolver() {
@@ -32,7 +30,7 @@ public class FileuploadConfig extends WebMvcConfigurerAdapter {
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler(env.getProperty("uploadLocation")).addResourceLocations(env.getProperty("reourceMapping"));
+		registry.addResourceHandler(env.getProperty("reourceMapping")).addResourceLocations(env.getProperty("uploadLocation"));
 	}
 	
 	

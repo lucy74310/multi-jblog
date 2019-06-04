@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -23,6 +22,9 @@ public class AuthLoginInterceptor extends HandlerInterceptorAdapter {
 			HttpServletResponse response, 
 			Object handler)
 			throws Exception {
+		
+		System.out.println("AuthLoginInterceptor 생성");
+		
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
 		
