@@ -183,5 +183,6 @@
 		<module>multi-jblog2</module>
 		<module>multi-jblog3</module>
 		<module>multi-jblog4</module>
+		<module>multi-jblog5</module>
 	</modules>
 </project>
