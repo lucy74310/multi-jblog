@@ -85,7 +85,7 @@
 	</bean>	
 	
 	<!-- the mvc resources url mapping -->
-	<mvc:resources mapping="/logo/**" location="file:./D:/jblog-uploads/" />
+	<mvc:resources mapping="/logo/**" location="file:/jblog-uploads/" />
 	
 	
 	<!-- 빈설정을 annotation으로 하겠다 (@Controller에 auto scan) -->
