@@ -32,7 +32,7 @@ public class FileuploadConfig extends WebMvcConfigurerAdapter {
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler(env.getProperty("reourceMapping")).addResourceLocations(env.getProperty("uploadLocation"));
+		registry.addResourceHandler("/logo/**").addResourceLocations("file:/jblog-uploads/");
 	}
 	
 	
