@@ -20,7 +20,9 @@ public class UserDao {
 		return 1 == count ;
 	}
 	public UserVo getByVo(UserVo vo) {
-		return sqlSession.selectOne("user.getById", vo);
+		UserVo getVo = sqlSession.selectOne("user.getByVo", vo);
+		System.out.println(getVo);
+		return getVo;
 	}
 
 }
