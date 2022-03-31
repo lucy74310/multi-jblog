@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<org.springframework-version>4.3.1.RELEASE</org.springframework-version>
+		<org.springframework-version>5.3.18</org.springframework-version>
 	</properties>
 	<dependencies>
 		<!-- javax.servlet api : jenkins에서 빌드할 때 servlet.jar 내장되어 있지 않아서 (톰캣은 내장되어 있음) javax.servlet.http 패키지 찾지 못하는 문제  -->
